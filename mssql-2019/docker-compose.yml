@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  PROJECTNAME_mssqldb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: PROJECTNAME_mssqldb
+    ports:
+      - 1433:1433
+    env_file:
+      - ./.env.dev
+    volumes:
+      - PROJECTNAME_mssql-db-data:/var/opt/mssql
+volumes:
+  PROJECTNAME_mssql-db-data:
