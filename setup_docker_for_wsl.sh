@@ -31,7 +31,7 @@ case $input in
     ;;
 esac
 
-cat > ~/bin/docker-service2 << EOF
+cat > ~/bin/docker-service << EOF
 DOCKER_DISTRO="$DOCKER_DISTRO"
 DOCKER_DIR=/mnt/wsl/shared-docker
 DOCKER_SOCK="\$DOCKER_DIR/docker.sock"
