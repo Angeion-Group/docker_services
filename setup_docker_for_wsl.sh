@@ -3,6 +3,9 @@
 # Import os-release as variables
 . /etc/os-release
 
+OS=$(uname -s)
+ARCHITECTURE=$(uname -m)
+
 sudo apt update && sudo apt upgrade
 sudo apt install --no-install-recommends apt-transport-https ca-certificates curl gnupg2
 curl -fsSL https://download.docker.com/linux/$ID/gpg | sudo tee /etc/apt/trusted.gpg.d/docker.asc
